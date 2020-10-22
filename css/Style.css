@@ -2,6 +2,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 .topo{ 
 
@@ -11,7 +12,8 @@
 }
 .topo nav{
 
-    width: 1200px;
+    width: 90%; /* % porcentagem, vw tamanho da tela, em,*/
+    max-width: 1200px; /*limita a largura*/
     height: 60px;
     margin: auto;
     display: flex;
@@ -36,7 +38,8 @@
     
 .topo nav ul{
 
-    width: 600px;
+    width: 90%;
+    max-width: 600px;
     display: flex;/*Coloca o objeto de lado*/
     list-style-type: none;/*remove marcadores*/
     justify-content: space-around;
@@ -53,7 +56,8 @@
 }
 
 .content{
-    width: 1200px;
+    width: 90%;
+    max-width: 1200px;
     height: 100%;
     margin:auto;
 } 
@@ -91,7 +95,8 @@
 }
 
 .sobre{
-    width: 1200px;
+    width: 90%;
+    max-width: 1200px;
     height: 100%;
     margin: 0 auto;
 }
@@ -111,6 +116,7 @@
 
 .conteudo_sobre img{
     width: 491px;
+    margin-right: 2em;
 
 }
 
@@ -151,7 +157,8 @@
 }
 
 .info{
-    width: 1200px;
+    width: 90%;
+    max-width: 1200px;
     height: 100%;
     margin: 0 auto;
     font-family: 'Courier prime', monospace;
@@ -233,4 +240,61 @@ font-family: 'Courier prime', monospace;
     position: fixed;
     bottom: 20px;
     right: 20px;
+}
+
+@media screen and (max-width: 1200px){
+    .topo nav{
+        width: 80%;
+    }
+
+    .content{
+        width: 80%;
+    }
+
+    .bk_sobre{
+        height: auto;
+        padding-bottom: 4em;
+    }
+
+    .conteudo_sobre {
+        flex-direction: column;
+    }
+    .conteudo_sobre img{
+        width: 600px;
+        margin-bottom: 2em;
+    }
+
+    .sobre{
+        width: 80%;
+    }
+
+    .info_card p {
+        width: 220px;
+    }
+
+    .endereco {
+        width: auto;
+        padding: 3em,0;
+    }
+    
+    .text-endereco{
+        width: 100%;
+        max-width: 900px;
+        height: auto;
+        flex-direction: column;
+        padding: 2em 2em;
+    }
+
+    .text-endereco p{
+        margin-left: unset;
+        margin-bottom: 2em;
+    }
+
+    .text-endereco img{
+        position: unset;
+    }
+
+    
+
+
 }
